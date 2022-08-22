@@ -7,19 +7,19 @@
   padding: 0.5rem 0rem;
   background-color: #fff;
   color: black;
-  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
 .brand-name {
   text-decoration: none;
   color: black;
   font-size: 1.3rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 
 .navigation-menu {
   margin-left: auto;
 }
+
 .navigation-menu ul {
   display: flex;
   padding: 0;
@@ -34,10 +34,10 @@
   text-decoration: none;
   display: block;
   width: 100%;
-  color: black;
+  color: #283b8b;
 }
 .navigation-menu li a:hover {
-  color: #588;
+  color: #2642af;
 }
 
 .hamburger {
@@ -56,6 +56,21 @@
   display: none;
 }
 
+.toggleDarkMode {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #283b8b;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-right: 4rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .hamburger:hover {
   background-color: #2642af;
 }
@@ -65,7 +80,11 @@
     display: block;
   }
   .brand-name {
+    position: relative;
     margin-left: 1rem;
+  }
+  .toggleDarkMode {
+    margin-right: 4rem;
   }
 }
 
@@ -80,9 +99,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-
     flex-direction: column;
-
     width: 100%;
     height: calc(100vh - 77px);
     background-color: white;
@@ -94,7 +111,6 @@
   }
   .navigation-menu li a {
     color: black;
-
     width: 100%;
     padding: 1.5rem 0;
   }
