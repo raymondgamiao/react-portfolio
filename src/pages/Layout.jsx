@@ -5,8 +5,10 @@ import Navigation from "./components/Navigation";
 const Layout = () => {
   return (
     <>
-      <Navigation />
-      <Outlet />
+      <div className="pageWrapper">
+        <Navigation />
+        <Outlet />
+      </div>
     </>
   );
 };

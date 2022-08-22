@@ -149,7 +149,7 @@
   "themes": [],
   "zLayers": 100,
   "emitters": {
-    "autoPlay": true,
+    "autoPlay": false,
     "fill": true,
     "life": {
       "wait": false,

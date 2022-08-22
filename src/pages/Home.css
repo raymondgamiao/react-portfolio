@@ -6,5 +6,64 @@
   padding: 0;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 0;
+}
+
+.container {
+  width: auto;
+  height: calc(100% - 60px);
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.CTA {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 3rem;
+  padding: 0.75rem;
+  margin: 0 1rem;
+  font-size: 1rem;
+  z-index: 2;
+}
+.ms-2 {
+  margin-left: 1rem;
+}
+.btn-primary {
+  background-color: #283b8b;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #283b8b;
+  border: #283b8b solid 1px;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #283b8b;
+  border: #283b8b solid 1px;
+}
+
+.btn-secondary:hover {
+  background-color: #283b8b;
+  color: white;
+  border: none;
+}
+
+.social-links {
+  z-index: 3;
 }
