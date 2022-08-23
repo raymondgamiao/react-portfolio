@@ -59,7 +59,7 @@
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 2
       },
       "remove": {
         "particles_nb": 2
@@ -83,7 +83,7 @@
       }
     },
     "color": {
-      "value": "#283b8b"
+      "value": "#2D4263"
     },
     "shape": {
       "type": "circle",
@@ -123,7 +123,7 @@
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#2642af",
+      "color": "#2D4263",
       "opacity": 0.4,
       "width": 1
     },

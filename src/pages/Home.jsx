@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 import { FaFileDownload } from "react-icons/fa";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import Socials from "./components/Socials";
-
+import { Link } from "react-router-dom";
 import "./Home.css";
 import particlesOptions from "../particles.json";
 
@@ -21,21 +21,21 @@ const Home = () => {
         <h2>
           <Typewriter
             options={{
-              strings: ["Fullstack Web Developer", "ampogi ko"],
+              strings: ["Fullstack Developer", "ampogi ko"],
               autoStart: true,
               loop: true,
             }}
           />
         </h2>
         <div className="CTA">
-          <button className="btn btn-primary">
+          <a className="btn btn-primary" href="/CV.pdf" download="CV.pdf">
             Resume
             <FaFileDownload className="ms-2" />
-          </button>
-          <button className="btn btn-secondary">
+          </a>
+          <Link className="btn btn-secondary" href="#" to="/contact">
             Let's Talk
             <BsFillChatDotsFill className="ms-2" />
-          </button>
+          </Link>
         </div>
         <Socials />
       </div>

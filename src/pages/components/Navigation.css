@@ -6,15 +6,31 @@
   position: relative;
   padding: 0.5rem 0rem;
   background-color: #fff;
-  color: black;
+  color: #191919;
   z-index: 3;
+}
+
+#dark .navigation {
+  background-color: #191919;
+}
+
+#light .navigation {
+  background-color: #fff;
 }
 
 .brand-name {
   text-decoration: none;
-  color: black;
+  color: #191919;
   font-size: 1.3rem;
   margin-left: 4rem;
+}
+
+#dark .brand-name {
+  color: #fff;
+}
+
+#light .brand-name {
+  color: #191919;
 }
 
 .navigation-menu {
@@ -35,10 +51,19 @@
   text-decoration: none;
   display: block;
   width: 100%;
-  color: #283b8b;
+  color: #2d4263;
 }
+
+#dark .navigation-menu li a {
+  color: #fff;
+}
+
+#light .branavigation-menu li ame {
+  color: #191919;
+}
+
 .navigation-menu li a:hover {
-  color: #2642af;
+  color: #191919;
 }
 
 .hamburger {
@@ -47,7 +72,7 @@
   width: 40px;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: #283b8b;
+  background-color: #2d4263;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -63,7 +88,7 @@
   width: 40px;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: #283b8b;
+  background-color: #2d4263;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   margin-right: 4rem;
@@ -73,7 +98,11 @@
 }
 
 .hamburger:hover {
-  background-color: #2642af;
+  background-color: #191919;
+}
+
+.toggleDarkMode:hover {
+  background-color: #191919;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,14 +133,14 @@
     width: 100%;
     height: calc(100vh - 77px);
     background-color: white;
-    border-top: 1px solid black;
+    border-top: 1px solid 191919;
   }
   .navigation-menu li {
     text-align: center;
     margin: 0;
   }
   .navigation-menu li a {
-    color: black;
+    color: #191919;
     width: 100%;
     padding: 1.5rem 0;
   }

@@ -13,3 +13,12 @@ body {
 .pageWrapper {
   height: 100vh;
 }
+
+#light {
+  background-color: #fff;
+  color: #191919;
+}
+#dark {
+  background-color: #191919;
+  color: #fff;
+}

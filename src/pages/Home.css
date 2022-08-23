@@ -36,30 +36,33 @@
   margin: 0 1rem;
   font-size: 1rem;
   z-index: 2;
+  transition: 0.75s;
+  text-decoration: none;
 }
+
 .ms-2 {
   margin-left: 1rem;
 }
 .btn-primary {
-  background-color: #283b8b;
+  background-color: #2d4263;
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
   background-color: white;
-  color: #283b8b;
-  border: #283b8b solid 1px;
+  color: #2d4263;
+  border: #2d4263 solid 1px;
 }
 
 .btn-secondary {
   background-color: white;
-  color: #283b8b;
-  border: #283b8b solid 1px;
+  color: #2d4263;
+  border: #2d4263 solid 1px;
 }
 
 .btn-secondary:hover {
-  background-color: #283b8b;
+  background-color: #2d4263;
   color: white;
   border: none;
 }

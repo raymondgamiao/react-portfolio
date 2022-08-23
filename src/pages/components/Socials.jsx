@@ -7,8 +7,8 @@ import "./Socials.css";
 
 const Socials = () => {
   return (
-    <div class="social-links">
-      <div class="social-btn flex-center">
+    <div className="social-links">
+      <div className="social-btn flex-center">
         <AiFillLinkedin />
         <a
           href="https://www.linkedin.com/in/raymond-gamiao-2b1213115/"
@@ -18,14 +18,14 @@ const Socials = () => {
         </a>
       </div>
 
-      <div class="social-btn flex-center">
+      <div className="social-btn flex-center">
         <AiFillGithub />
         <a href="https://github.com/raymondgamiao" target={"_blank"}>
           Github
         </a>
       </div>
 
-      <div class="social-btn flex-center">
+      <div className="social-btn flex-center">
         <SiUpwork />
         <a
           href="https://www.upwork.com/freelancers/~012aeb562ada34c0f9"
@@ -35,7 +35,7 @@ const Socials = () => {
         </a>
       </div>
 
-      <div class="social-btn flex-center">
+      <div className="social-btn flex-center">
         <AiFillFacebook />
         <a href="https://www.facebook.com/royalrfgum" target={"_blank"}>
           Facebook

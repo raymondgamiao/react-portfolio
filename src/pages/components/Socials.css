@@ -12,29 +12,29 @@
   cursor: pointer;
   height: 50px;
   width: 50px;
-  color: #283b8b;
-  border: #283b8b solid 1px;
+  color: #2d4263;
+  border: #2d4263 solid 1px;
   border-radius: 50%;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   background: white;
   margin: 5px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .social-btn a {
   width: 0px;
   overflow: hidden;
-  transition: 1s;
+  transition: 0.5s;
   text-align: center;
   text-decoration: none;
-  color: #283b8b;
+  color: #2d4263;
   font-size: 1rem;
 }
 
 .social-btn:hover {
   width: 100px;
   border-radius: 5px;
-  background: #283b8b;
+  background: #2d4263;
   color: #fff;
 }
 
