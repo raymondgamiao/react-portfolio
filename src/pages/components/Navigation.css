@@ -20,17 +20,17 @@
 
 .brand-name {
   text-decoration: none;
-  color: #191919;
+  color: #c84b31;
   font-size: 1.3rem;
   margin-left: 4rem;
 }
 
 #dark .brand-name {
-  color: #fff;
+  color: #c84b31;
 }
 
 #light .brand-name {
-  color: #191919;
+  color: #c84b31;
 }
 
 .navigation-menu {
@@ -58,11 +58,19 @@
   color: #fff;
 }
 
-#light .branavigation-menu li ame {
-  color: #191919;
+#light .navigation-menu li a {
+  color: #2d4263;
 }
 
 .navigation-menu li a:hover {
+  color: #191919;
+}
+
+#dark .navigation-menu li a:hover {
+  color: #eee;
+}
+
+#light .navigation-menu li a:hover {
   color: #191919;
 }
 
@@ -135,6 +143,15 @@
     background-color: white;
     border-top: 1px solid 191919;
   }
+
+  #dark .navigation-menu ul {
+    background-color: #191919;
+  }
+
+  #light .navigation-menu ul {
+    background-color: white;
+  }
+
   .navigation-menu li {
     text-align: center;
     margin: 0;
@@ -145,6 +162,14 @@
     padding: 1.5rem 0;
   }
   .navigation-menu li:hover {
+    background-color: #eee;
+  }
+
+  #dark .navigation-menu li:hover {
+    background-color: #2d4263;
+  }
+
+  #light .navigation-menu li:hover {
     background-color: #eee;
   }
 }

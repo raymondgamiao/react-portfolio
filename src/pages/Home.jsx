@@ -1,23 +1,19 @@
 import React, { useCallback } from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
 import Typewriter from "typewriter-effect";
 import { FaFileDownload } from "react-icons/fa";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import Socials from "./components/Socials";
+import Stacks from "./components/Stacks";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import particlesOptions from "../particles.json";
 
 const Home = () => {
-  const particlesInit = useCallback((main) => {
-    loadFull(main);
-  }, []);
-
   return (
     <>
-      <div className="container">
-        <h1>Hi! I'm MONDI</h1>
+      <div className="container" id="landing">
+        <h1>
+          Hi! I'm <span className="orange ">MONDI</span>
+        </h1>
         <h2>
           <Typewriter
             options={{
@@ -27,6 +23,14 @@ const Home = () => {
             }}
           />
         </h2>
+        <div>
+          <p>
+            Im Raymond Gamiao, a full-stack developer based in Cagayan,
+            Philippines
+          </p>
+          <p>Lorem Ipsum dolor sit amet consectitur</p>
+        </div>
+        <Stacks />
         <div className="CTA">
           <a className="btn btn-primary" href="/CV.pdf" download="CV.pdf">
             Resume
@@ -39,7 +43,6 @@ const Home = () => {
         </div>
         <Socials />
       </div>
-      <Particles options={particlesOptions} init={particlesInit} />
     </>
   );
 };
