@@ -6,11 +6,19 @@ import Socials from "./components/Socials";
 import Stacks from "./components/Stacks";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
     <>
-      <div className="container" id="landing">
+      <motion.div
+        className="container"
+        id="landing"
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 500 }}
+        transition={{ duration: 0.75 }}
+      >
         <h1>
           Hi! I'm <span className="orange ">MONDI</span>
         </h1>
@@ -41,7 +49,7 @@ const Home = () => {
           </Link>
         </div>
         <Socials />
-      </div>
+      </motion.div>
     </>
   );
 };

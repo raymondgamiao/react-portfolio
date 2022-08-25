@@ -8,6 +8,7 @@
   background-color: #fff;
   color: #191919;
   z-index: 3;
+  transition: 0.75s;
 }
 
 #dark .navigation {

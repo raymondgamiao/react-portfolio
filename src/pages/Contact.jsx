@@ -1,6 +1,7 @@
 import React from "react";
 import { ValidationError, useForm } from "@formspree/react";
 import "./Contact.css";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mayknorn");
@@ -12,7 +13,14 @@ const Contact = () => {
     );
   }
   return (
-    <div className="container" id="contact">
+    <motion.div
+      className="container"
+      id="contact"
+      initial={{ opacity: 0, y: 200 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75 }}
+    >
       <h1>Contact Me</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
@@ -45,7 +53,7 @@ const Contact = () => {
           Submit
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 export default Contact;

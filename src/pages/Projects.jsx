@@ -2,10 +2,17 @@ import React from "react";
 import "./Projects.css";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="container">
+    <motion.div
+      className="container"
+      initial={{ opacity: 0, y: 200 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75 }}
+    >
       <h1>Projects</h1>
       <div className="projectsWrap">
         <div className="ProjectCard" id="project2">
@@ -119,7 +126,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

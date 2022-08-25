@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../Layout";
 import { useContext, useState } from "react";
 import "./Navigation.css";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -47,7 +48,7 @@ const Navigation = () => {
         }
       >
         <ul>
-          <li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <Link
               to="/"
               onClick={() => {
@@ -56,8 +57,8 @@ const Navigation = () => {
             >
               Home
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <Link
               to="/projects"
               onClick={() => {
@@ -66,8 +67,8 @@ const Navigation = () => {
             >
               Projects
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
             <Link
               to="/contact"
               onClick={() => {
@@ -76,7 +77,7 @@ const Navigation = () => {
             >
               Contact
             </Link>
-          </li>
+          </motion.li>
         </ul>
       </div>
 
