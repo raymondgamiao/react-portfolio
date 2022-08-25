@@ -17,7 +17,7 @@ const Home = () => {
         <h2>
           <Typewriter
             options={{
-              strings: ["Fullstack Developer", "ampogi ko"],
+              strings: ["Fullstack Developer", "Is open to work"],
               autoStart: true,
               loop: true,
             }}
@@ -28,7 +28,6 @@ const Home = () => {
             Im Raymond Gamiao, a full-stack developer based in Cagayan,
             Philippines
           </p>
-          <p>Lorem Ipsum dolor sit amet consectitur</p>
         </div>
         <Stacks />
         <div className="CTA">

@@ -7,13 +7,8 @@ import "./Navigation.css";
 const Navigation = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  //const theme = useContext(ThemeContext);
-  //const toggleTheme = useContext(toggleTheme);
 
   return (
-    //<ThemeContext.Consumer>
     <nav className="navigation">
       <Link className="brand-name" to="/">
         MONDI
@@ -29,12 +24,18 @@ const Navigation = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
-          viewBox="0 0 20 20"
+          viewBox={isNavExpanded ? "0 0 23 23" : "0 0 20 20"}
           fill="white"
+          stroke="white"
+          strokeWidth={isNavExpanded ? "1.5" : "0"}
         >
           <path
             fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            d={
+              isNavExpanded
+                ? "M4.5 19.5l15-15m-15 0l15 15"
+                : "M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            }
             clipRule="evenodd"
           />
         </svg>
@@ -47,13 +48,34 @@ const Navigation = () => {
       >
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link
+              to="/projects"
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/contact"
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
@@ -85,7 +107,6 @@ const Navigation = () => {
         </svg>
       </button>
     </nav>
-    // </ThemeContext.Consumer>
   );
 };
 
