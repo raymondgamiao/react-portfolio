@@ -15,6 +15,42 @@ const Projects = () => {
     >
       <h1>Projects</h1>
       <div className="projectsWrap">
+        <div className="ProjectCard" id="project6">
+          <div className="ProjectDetails">
+            <div className="ProjectImg"></div>
+            <h2 className="ProjectTitle">React Weather App</h2>
+            <span className="ProjectType">React API app</span>
+            <p className="ProjectDesc">
+              Quick project using that shows weather details based on location
+              searched
+            </p>
+            <ul className="ProjectStacks">
+              <li>ReactJS</li>
+              <li>Tailwind</li>
+              <li>API</li>
+              <li>Javascript</li>
+            </ul>
+          </div>
+          <div className="Footer">
+            <a
+              className="btn btn-primary"
+              href="https://github.com/raymondgamiao/react-weather-app"
+              target={"_blank"}
+            >
+              Repo
+              <AiFillGithub className="ms-2" />
+            </a>
+            <a
+              className="btn btn-secondary"
+              href="https://react-weather-app-z9t3.vercel.app/"
+              target={"_blank"}
+            >
+              Live Demo
+              <FiExternalLink className="ms-2" />
+            </a>
+          </div>
+        </div>
+
         <div className="ProjectCard" id="project5">
           <div className="ProjectDetails">
             <div className="ProjectImg"></div>

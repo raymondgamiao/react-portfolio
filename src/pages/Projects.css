@@ -40,6 +40,10 @@
   background-image: url(../img/5.png);
 }
 
+#project6 .ProjectImg {
+  background-image: url(../img/6.png);
+}
+
 .ProjectImg {
   background-size: cover;
   background-position: center;
