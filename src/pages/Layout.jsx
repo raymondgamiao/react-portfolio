@@ -5,12 +5,16 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesOptions from "../particles.json";
 
+
 export const ThemeContext = createContext();
 
 const Layout = () => {
-  const particlesInit = useCallback((main) => {
-    loadFull(main);
-  }, []);
+  const particlesInit = async (main) => {
+    await loadFull(main);
+  };
+  const particlesLoaded = (container) => {
+      console.log(container)
+  };
   const [theme, setTheme] = useState("dark");
   const toggleTheme = () => {
     setTheme((curr) => (curr == "light" ? "dark" : "light"));
@@ -19,7 +23,12 @@ const Layout = () => {
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div className="pageWrapper" id={theme}>
-          <Particles options={particlesOptions} init={particlesInit} />
+          <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={particlesOptions}
+          />
           <Navigation />
           <Outlet />
         </div>

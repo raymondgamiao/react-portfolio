@@ -3,13 +3,14 @@
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
   padding: 0.5rem 0rem;
-  background-color: #fff;
   color: #191919;
   z-index: 3;
   transition: 0.75s;
 }
+
+
 
 #dark .navigation {
   background-color: #191919;
@@ -39,7 +40,7 @@
 }
 
 .navigation-menu ul {
-  display: flex;
+  display: none;
   padding: 0;
 }
 
@@ -180,10 +181,12 @@
     /* previous styles */
     display: none;
   }
+  
 }
 
 @media screen and (max-width: 768px) {
   .navigation-menu.expanded ul {
     display: block;
   }
+  
 }

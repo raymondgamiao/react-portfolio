@@ -1,55 +1,58 @@
-import React, { useCallback } from "react";
-import Typewriter from "typewriter-effect";
-import { FaFileDownload } from "react-icons/fa";
-import { BsFillChatDotsFill } from "react-icons/bs";
-import Socials from "./components/Socials";
-import Stacks from "./components/Stacks";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import Landing from "./components/Landing";
+import Skills from "./components/Skills"; 
+import Web from "./components/Web"; 
+import Analytics from "./components/Analytics"; 
 import "./Home.css";
-import { motion } from "framer-motion";
+import Contact from "./components/Contact";
+import SideNav from "./components/SideNav";
+
 
 const Home = () => {
+  const [activeSection, setActiveSection] = useState("landing");
+
+  const detectActiveSection = () => {
+    const sections = ["landing", "skills", "web", "analytics", "contact"];
+    const scrollPosition = document.querySelector(".pageWrapper").scrollTop + window.innerHeight / 2;
+    
+    for (const sectionId of sections) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+          setActiveSection(sectionId);
+          break; // Exit loop once the active section is found
+        }
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      detectActiveSection();
+    };
+
+    const pageWrapper = document.querySelector(".pageWrapper");
+    pageWrapper.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      
+      pageWrapper.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <>
-      <motion.div
-        className="container"
-        id="landing"
-        initial={{ opacity: 0, y: 200 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 500 }}
-        transition={{ duration: 0.75 }}
-      >
-        <h1>
-          Hi! I'm <span className="orange ">MONDI</span>
-        </h1>
-        <h2>
-          <Typewriter
-            options={{
-              strings: ["Fullstack Developer", "Is open to work"],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </h2>
-        <div>
-          <p>
-            Im Raymond Gamiao, a full-stack developer based in Cagayan,
-            Philippines
-          </p>
-        </div>
-        <Stacks />
-        <div className="CTA">
-          <a className="btn btn-primary" href="/CV.pdf" download="CV.pdf">
-            Resume
-            <FaFileDownload className="ms-2" />
-          </a>
-          <Link className="btn btn-secondary" href="#" to="/contact">
-            Let's Talk
-            <BsFillChatDotsFill className="ms-2" />
-          </Link>
-        </div>
-        <Socials />
-      </motion.div>
+      <SideNav activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Landing activeSection={activeSection} setActiveSection={setActiveSection}/>
+      <Skills/>
+      <Web/>
+      <Analytics/>
+      <Contact/>
     </>
   );
 };

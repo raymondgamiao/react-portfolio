@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
-import "./index.css";
 import { AnimatePresence } from "framer-motion";
 
 export default function App() {

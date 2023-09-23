@@ -1,0 +1,108 @@
+#landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+  
+.headline{
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.typewriter{
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.description{
+  font-size: 1.75rem;
+  line-height: 1.5;
+}
+
+.orange {
+  color: #c84b31;
+}
+
+
+.CTA {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ms-2 {
+  margin-left: 10px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 3rem;
+  padding: 0.75rem;
+  margin-right: 2rem;
+  font-size: 1rem;
+  transition: 0.75s;
+  text-decoration: none;
+}
+
+
+.btn-primary {
+  background-color: #2d4263;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #2d4263;
+  border: #2d4263 solid 1px;
+}
+
+.btn-secondary {
+  background-color: #c84b31;
+  color: #fff;
+  border: #c84b31 solid 1px;
+}
+
+.btn-secondary:hover {
+  background-color: #2d4263;
+  color: white;
+  border: none;
+}
+
+.down-arrow{
+  font-size: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 1rem);
+}
+
+.down-arrow:hover {
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width:768px) {
+  #landing {
+    align-items: center;
+    text-align: center;
+  }
+  .headline{
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .typewriter{
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .description{
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}

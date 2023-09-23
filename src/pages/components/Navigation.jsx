@@ -21,7 +21,6 @@ const Navigation = () => {
           setIsNavExpanded(!isNavExpanded);
         }}
       >
-        {/* icon from heroicons.com */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -47,45 +46,48 @@ const Navigation = () => {
           isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
         }
       >
-        <ul>
+        <ul className="topNav">
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link
-              to="/"
+            <a
+              href="#landing"
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
-              }}
-            >
-              Home
-            </Link>
+              }}>Home</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link
-              to="/projects"
+            <a
+              href="#skills"
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
-              }}
-            >
-              Projects
-            </Link>
+              }}>Skills</a>
           </motion.li>
           <motion.li whileHover={{ scale: 1.2 }}>
-            <Link
-              to="/contact"
+            <a
+              href="#web"
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
-              }}
-            >
-              Contact
-            </Link>
+              }}>Web Projects</a>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
+            <a
+              href="#analytics"
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}>Analytics Projects</a>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.2 }}>
+            <a
+              href="#contact"
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}>Contact</a>
           </motion.li>
         </ul>
       </div>
 
       <button
-        //className={isDarkMode ? "toggleDarkMode yes" : "toggleDarkMode no"}
         className="toggleDarkMode"
         onClick={toggleTheme}
-        /*className={theme}  onClick={toggleTheme} */
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +105,6 @@ const Navigation = () => {
                 ? "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                 : "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
             }
-            //d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
           />
         </svg>
       </button>
