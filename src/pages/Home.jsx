@@ -3,7 +3,6 @@ import Landing from "./components/Landing";
 import Skills from "./components/Skills"; 
 import Web from "./components/Web"; 
 import Analytics from "./components/Analytics"; 
-import "./Home.css";
 import Contact from "./components/Contact";
 import SideNav from "./components/SideNav";
 

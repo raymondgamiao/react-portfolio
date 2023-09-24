@@ -1,6 +1,7 @@
 import React, { createContext, useState, useCallback } from "react";
 import { Outlet } from "react-router-dom";
 import Navigation from "./components/Navigation";
+import Socials from "./components/Socials";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesOptions from "../particles.json";
@@ -31,6 +32,8 @@ const Layout = () => {
           />
           <Navigation />
           <Outlet />
+          <Socials />
+
         </div>
       </ThemeContext.Provider>
     </>

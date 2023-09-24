@@ -1,4 +1,51 @@
 #contact{
-    scroll-margin-top: 60px;
-    border: solid yellow 1px;
+    height: calc(100vh - 120px);
 }
+#contact .section-title{
+    text-align: center;
+    padding: 2rem 0 3rem 0;
+    position: relative;
+}
+#contact .section-title h2{
+    font-size: 3rem;
+    margin: 0;
+}
+
+#contact form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 30rem;
+    gap: 1rem;
+}
+#contact form input, textarea{
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+#contact form textarea {
+    height: 10rem;
+}
+  
+#contact form label{
+    display: none;
+}
+
+#btn-contact {
+  margin: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    #contact .section-title h2{
+        font-size: 2rem;
+    }
+    #contact form input, textarea{
+        font-size: 1rem;
+    }
+    #contact form {
+        width: 95%;
+    }
+}
+
+
+  

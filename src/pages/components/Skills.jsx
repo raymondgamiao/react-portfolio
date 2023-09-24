@@ -35,7 +35,7 @@ const Skills = () => {
         </div>
         <div className="skills-list">
           <h3>Web Development</h3>
-          <ul class="stacks">
+          <ul className="stacks">
             <li><AiFillHtml5 /> HTML</li>
             <li><DiCss3 /> CSS</li>
             <li><BsFillBootstrapFill /> Bootstrap</li>
@@ -47,7 +47,7 @@ const Skills = () => {
           </ul>
 
           <h3>Data Analysis</h3>
-          <ul class="stacks">
+          <ul className="stacks">
             <li><SiR /> R</li>
             <li><SiTableau /> Tableau</li>
             <li><SiPowerbi /> Power BI</li>
@@ -57,7 +57,7 @@ const Skills = () => {
           </ul>
 
           <h3>Tools</h3>
-          <ul class="stacks">
+          <ul className="stacks">
             <li><SiGithub /> GitHub</li>
             <li><SiJira /> JIRA</li>
             <li><SiSlack /> Slack</li>
